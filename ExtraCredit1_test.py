@@ -64,6 +64,19 @@ class Testing(unittest.TestCase):
         shakerSortBooks(books, "quality", False)
         self.assertListEqual(des_ord_quality, books)
 
+    def test_rangeQualityCheckBooks(self):
+        books = [['a', 8.0, 1, True],
+                 ['b', 16.0, 3, True],
+                 ['b', 5.0, 2, True],
+                 ['a', 2.0, 4, True],
+                 ['a', 4.0, 5, True]]
+        list_book = rangeQualityCheckBooks(books,[4,5])
+        verif = True
+        for book in list_book:
+            if not(4<=book[2]<=5):
+                verif = False
+        self.assertEqual(True, verif)
+
     
 if __name__ == '__main__':
     unittest.main()
