@@ -82,7 +82,7 @@ def shakerSortBooks(list_book, what_to_sort, ascending):
 
 def rangeQualityCheckBooks(list_book, quality_range):
     '''
-    This function filter book within a quality range
+    This function filter book within a quality range (INCLUSIVE)
     Args:
         list_book (list): book database
         quality_range (list): a list with two integer values for the beginning and end range (valid range 0-5)
